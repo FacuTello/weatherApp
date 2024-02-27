@@ -1,6 +1,4 @@
 'use strict'
-
-
 const button = document.getElementById("btn-search");
 
 function searchCityWeather(){
@@ -15,9 +13,20 @@ peticion
 }
 
 function showInformationInDOM(res){
-    let cityName = res.location.name;
-           let divCity = document.getElementById('city');
+           let cityName = res.location.name;
+           const divCity = document.getElementById('cityContainer');
            divCity.textContent = cityName;
+           const divTextTemp = document.getElementById('textTemp');
+           const textTemp = res.current.condition.text;
+           divTextTemp.textContent = textTemp;
+           const imgContainer = document.getElementById('imageWeather');
+           imgContainer.src = res.current.condition.icon;
+           const tempDiv = document.getElementById('temperature');
+           let cityTemp = res.current.temp_c;
+           tempDiv.textContent = `${cityTemp}° grados`;
+          
+          
+           
 }
 button.addEventListener('click', searchCityWeather);
 
