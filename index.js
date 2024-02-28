@@ -8,14 +8,15 @@ peticion
     .then(res => res.json())
     .then(res => {
         console.log(res);
-          showInformationInDOM(res);
+          showCurrentInformationInDOM(res);
     });
 }
 
-function showInformationInDOM(res){
+function showCurrentInformationInDOM(res){
            let cityName = res.location.name;
+           let cityCountry = res.location.country
            const divCity = document.getElementById('cityContainer');
-           divCity.textContent = cityName;
+           divCity.textContent = `${cityName}, ${cityCountry}`;
            const divTextTemp = document.getElementById('textTemp');
            const textTemp = res.current.condition.text;
            divTextTemp.textContent = textTemp;
@@ -24,10 +25,8 @@ function showInformationInDOM(res){
            const tempDiv = document.getElementById('temperature');
            let cityTemp = res.current.temp_c;
            tempDiv.textContent = `${cityTemp}° grados`;
-          
-          
-           
 }
+
 button.addEventListener('click', searchCityWeather);
 
 
