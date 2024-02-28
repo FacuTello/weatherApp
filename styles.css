@@ -1,6 +1,7 @@
 body {
     background-image: url('background1.jpg');
     background-size: cover;
+
 }
 
 .title{
@@ -20,6 +21,18 @@ body {
     font-size: 30px;
     border-radius: 10px;
     text-align: center;
+    margin-bottom: 40px;
+    margin-right: 5px;
+}
+
+#btn-search{
+    border-radius: 10px;
+    font-family: "Oswald", sans-serif;
+    background-color: blue;
+    color: white;
+    height: 55px;
+    width: 100px;
+    font-size: 20px;
 }
 
 #InformationContainer{
@@ -28,7 +41,7 @@ body {
     align-items: center;
     width: 100%;
     height: 50px;
-    font-size: 35px;
+    font-size: 50px;
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
@@ -37,14 +50,42 @@ body {
 
 
 
-
-
-
-
-
-
-@media screen and (max-width: 350px) {
-    body{
+@media only screen and (max-width: 320px) {
+    body {
+        background-image: url('background1.jpg');
         background-size: auto;
     }
+    .title{
+        font-size: 40px;
+    }
+    .input-search{
+        width: 190px;
+        height: 30px;
+        font-size: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    #btn-search{
+        height: 35px;
+        width: 70px;
+        font-size: 15px;
+    }
+    #InformationContainer{
+        width: 90%;
+        height: 50px;
+        font-size: 40px;
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+    }
 }
+
+
+
+
+
+
+
+
+
