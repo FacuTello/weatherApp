@@ -1,6 +1,8 @@
 # Weather App
 
-[this link](https://ibb.co/d6WHyfs)
+
+![Preview](https://ibb.co/d6WHyfs)
+
 
 This is a simple weather app implemented in JavaScript using the WeatherAPI. It allows users to search for weather forecasts for different locations.
 
